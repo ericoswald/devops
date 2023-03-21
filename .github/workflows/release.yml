@@ -17,4 +17,5 @@ jobs:
 
       - uses: ncipollo/release-action@v1
         with:
-          name: Nouvelle release
+        artifacts: "index.html"
+          name: "Nouvelle release"
