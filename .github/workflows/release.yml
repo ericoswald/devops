@@ -1,0 +1,20 @@
+name: Génération auto des releases
+
+on:
+  push:
+    commit:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Publication de la nouvelle version
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: ncipollo/release-action@v1
+        with:
+          name: Nouvelle release
